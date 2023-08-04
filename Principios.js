@@ -6,3 +6,8 @@ console.log('Meu ' + 'nome ' + 'é ' + 'Henrique');
 
 console.log(5 > 200);
 console.log(5 <= 200);
+
+console.log(9 === 9);
+
+console.log(5 > 200 && 3 == 2);
+console.log(5 > 200 || 3 == 2);
