@@ -1,0 +1,10 @@
+console.log('Hello World!');
+console.log('Meu nome é Henrique');
+console.log('Este é a segunda aula de JavaScript');
+console.log(235);
+console.log(13.5);
+console.log(3*(12+4)/8);
+console.log(3 == 3 && 4 > 1);
+console.log(4 <= 2 || "Matheus" == "Pedro");
+console.log(!(2 === 2));
+console.log(415*"Caracter");
