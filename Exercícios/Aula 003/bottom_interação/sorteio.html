@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sorteio</title>
+  </head>
+  <body>
+    <style>
+      body {
+        font: 12pt Arial;
+        text-align: center;
+        margin-top: 20%;
+        text-transform: uppercase;
+      }
+      button {
+        font-size: 12pt;
+        padding: 30px;
+        border: none;
+        border-radius: 5%;
+        background-color: rgb(1, 64, 160);
+        color: #fff;
+        text-transform: uppercase;
+        cursor: pointer;
+      }
+      img {
+        margin-top: 3%;
+      }
+
+      p {
+        margin-top: 3%;
+      }
+    </style>
+
+    <h1>Sorteio de carros</h1>
+    <button onclick="premio1()">Prêmio Nº1</button>
+    <button onclick="premio2()">Prêmio Nº2</button>
+    <button onclick="premio3()">Prêmio Nº3</button>
+    <section id="resultado">
+      <p>Aqui vai aparecer o resultado...</p>
+    </section>
+    <script>
+      function premio1() {
+        let res = window.document.getElementById("resultado");
+        res.innerHTML = ` <p> Seu prêmio foi: Mercedes AMG <br>
+            <img src="amg.jpg" width="550px" height="300px">`;
+      }
+
+      function premio2() {
+        let res2 = window.document.getElementById("resultado");
+        res2.innerHTML = ` <p> Seu prêmio foi: Civic 10gen <br> 
+            <img src="civic.jpg" width="550px" height="300px">`;
+      }
+      function premio3() {
+        let res3 = window.document.getElementById("resultado");
+        res3.innerHTML = ` <p> Seu prêmio foi: HR-V 2023 <br>
+            <img src="hr-v.jpg" width="550px" height="300px"> `;
+      }
+    </script>
+    <br>
+  </body>
+</html>
