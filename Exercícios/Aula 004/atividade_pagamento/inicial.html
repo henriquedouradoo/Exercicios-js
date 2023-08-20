@@ -159,6 +159,13 @@
           }
         }
       });
+
+      calculateButton.addEventListener('click', () => {
+        dadosDiv.style.display = 'none';
+        paymentResultsDiv.style.display = 'block';
+
+        invoiceValueSpan.style.display = 'block';
+      })
     </script>
   </body>
 </html>
