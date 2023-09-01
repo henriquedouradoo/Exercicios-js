@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Boletim Escolar</title>
+  </head>
+  <body>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap");
+
+      body {
+        background: url(capa-04.png);
+        background-position: 1005%;
+        font-family: "Poppins", sans-serif;
+        text-align: center;
+        overflow: hidden;
+      }
+
+      .dados {
+        background-color: aliceblue;
+        width: 20%;
+        padding: 2rem;
+        align-items: center;
+        text-align: center;
+        position: relative;
+        left: 40%;
+        margin-top: 16%;
+        border-radius: 8px;
+        box-shadow: 2px 2px 2px 2px #050505;
+      }
+
+      button {
+        border: none;
+        border-radius: 8px;
+        padding: 1.6rem;
+        background-color: #3333b3;
+        color: #fff;
+        text-transform: uppercase;
+        box-shadow: 2px 2px 2px 2px #050505;
+      }
+
+      mark {
+        background-color: #3333b3;
+        color: #fff;
+      }
+    </style>
+    <div class="dados">
+      <h1>Boletim Escolar</h1>
+      <button onclick="media()">Calcular média</button>
+      <section id="situacao">
+        <p>O Resultado vai aparecer aqui...</p>
+      </section>
+    </div>
+
+    <script>
+      function media() {
+        let nome = window.prompt("Qual é o nome do aluno? ");
+        let nota_1 = Number(window.prompt(`Qual foi a primeira nota?`));
+        let nota_2 = Number(window.prompt(`qual a outra nota? `));
+        let nota_3 = Number(window.prompt(`qual a outra nota? `));
+        let nota_4 = Number(window.prompt(`qual a outra nota? `));
+        med = (nota_1 + nota_2 + nota_3 + nota_4) / 4;
+
+        let mensagem;
+        if (med >= 6) {
+          mensagem = "meus parabéns você foi aprovado!";
+        } else if (med >= 5.01) {
+            mensagem = "Você está de recuperação."
+        }
+        else if (med === 5) {
+            mensagem = "Você está de recuperação."
+        } 
+        else {
+          mensagem = "Você foi reprovado!";
+        }
+        let res = document.getElementById("situacao");
+        res.innerHTML = `<p>Calculando a média final de <mark>${nome}</mark>.</p>`;
+        res.innerHTML += `<p>As notas obtidas foram <mark>${nota_1} ,  ${nota_2} , ${nota_3}, ${nota_4} </mark></p>`;
+        res.innerHTML += `<p>A média será <mark>${med}</mark></p>`;
+        res.innerHTML += `<p>A mensagem que temos é: <strong style='color:red;'>${mensagem}</strong></p>`;
+      }
+    </script>
+  </body>
+</html>

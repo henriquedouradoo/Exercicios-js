@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <style>
+      body {
+        font: 12pt Arial;
+        text-align: center;
+        margin-top: 20%;
+        text-transform: uppercase;
+      }
+      button {
+        font-size: 12pt;
+        padding: 30px;
+        border: none;
+        border-radius: 5%;
+        background-color: rgb(1, 64, 160);
+        color: #fff;
+        text-transform: uppercase;
+      }
+    </style>
+    <h1>Trabalhando com Dados v3.0</h1>
+    <button onclick="inicio()">CLique para começar</button>
+    <section id="resultado">
+      <p>Aqui vai aparecer o resultado...</p>
+    </section>
+    <script>
+      function inicio() {
+        let nome = window.prompt("Qual o seu nome: ");
+        let res = window.document.getElementById("resultado");
+        res.innerHTML = `<p>Olá, <strong>${nome} </strong>! E um grande desprazer te conhecer! `;
+      }
+    </script>
+  </body>
+</html>
