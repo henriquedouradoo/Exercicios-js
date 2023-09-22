@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculadora</title>
+  </head>
+  <body>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Lato:wght@700&display=swap");
+
+      body {
+        font-family: "Lato", sans-serif;
+        background-color: #d1d1d1;
+      }
+
+      p {
+        background-color: #fff;
+      }
+
+      a{
+        
+      }
+      .dados {
+        background-color: #494949;
+        width: 20%;
+        padding: 2rem;
+        align-items: center;
+        text-align: center;
+        position: relative;
+        left: 38%;
+        margin-top: 16%;
+        border-radius: 8px;
+        box-shadow: rgba(0, 0, 0, 0.4) 5px 5px, rgba(0, 0, 0, 0.3) 10px 10px,
+          rgba(0, 0, 0, 0.2) 15px 15px, rgba(14, 14, 14, 0.1) 20px 20px,
+          rgba(8, 8, 8, 0.05) 25px 25px;
+      }
+
+      .button-52 {
+        font-size: 16px;
+        font-weight: 200;
+        letter-spacing: 1px;
+        padding: 13px 20px 13px;
+        outline: 0;
+        border: 1px solid rgb(0, 0, 0);
+        cursor: pointer;
+        position: relative;
+        background-color: rgba(0, 0, 0, 0);
+        user-select: none;
+        -webkit-user-select: none;
+        touch-action: manipulation;
+        margin-left: 43%;
+        margin-top: 3%;
+        font-family: "Lato", sans-serif;
+      }
+
+      .button-52:after {
+        content: "";
+        background-color: #494949;
+        width: 100%;
+        z-index: -1;
+        position: absolute;
+        height: 100%;
+        top: 7px;
+        left: 7px;
+        transition: 0.2s;
+      }
+
+      .button-52:hover:after {
+        top: 0px;
+        left: 0px;
+      }
+
+      @media (min-width: 768px) {
+        .button-52 {
+          padding: 13px 50px 13px;
+        }
+      }
+    </style>
+    <div class="dados">
+    <h2>Calculadora</h2>
+    <section id="resultado"></section>
+    </div>
+    <button class="button-52" onclick="iniciar()" role="button">
+    Calcular Operação
+    </button>
+
+    <script src="index.js"></script>
+  </body>
+</html>
